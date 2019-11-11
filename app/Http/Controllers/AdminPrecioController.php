@@ -11,9 +11,10 @@ class AdminPrecioController extends CBController {
         $this->setPermalink("precio");
         $this->setPageTitle("Precio");
 
-        $this->addSelectTable("Habitación","habitaciones_id",["table"=>"hp_habitaciones","value_option"=>"id","display_option"=>"nombre","sql_condition"=>""]);
+        $this->addSelectTable("Hostal","hostales_id",["table"=>"hp_hostales","value_option"=>"id","display_option"=>"nombre","sql_condition"=>""]);
+		$this->addSelectTable("Habitación","habitaciones_id",["table"=>"hp_habitaciones","value_option"=>"id","display_option"=>"nombre","sql_condition"=>""])->foreignKey('hostales_id');
 		$this->addSelectTable("Temporada","temporada_id",["table"=>"hp_temporada","value_option"=>"id","display_option"=>"nombre","sql_condition"=>""]);
-		$this->addText("Precio","precio")->strLimit(150)->maxLength(255);
+		$this->addMoney("Precio","precio");
 		
 
     }

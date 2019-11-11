@@ -14,8 +14,8 @@ class AdminAcompañantesController extends CBController {
         $this->addText("Nombre","nombre")->strLimit(150)->maxLength(255);
 		$this->addText("Apellidos","apellidos")->strLimit(150)->maxLength(255);
 		$this->addText("Nacionalidad","nacionalidad")->strLimit(150)->maxLength(255);
-		$this->addDate("Fecha Nacimiento","fecha_nacimiento");
-		$this->addSelectOption("Género","genero")->options(['sexo'=>'Masculino']);
+		$this->addDate("Fecha Nacimiento","fecha_nacimiento")->format('d-m-y');
+		$this->addSelectOption("Género","genero")->options(['male'=>'Masculino','female'=>'Femenino']);
 		$this->addSelectTable("Reserva","hp_reservas_id",["table"=>"hp_reservas","value_option"=>"id","display_option"=>"nombre","sql_condition"=>""]);
 		
 

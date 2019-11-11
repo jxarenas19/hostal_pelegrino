@@ -11,10 +11,8 @@ class AdminTemporadaController extends CBController {
         $this->setPermalink("temporada");
         $this->setPageTitle("Temporada");
 
-        $this->addDate("Fecha Inicio","fecha_ini");
-		$this->addDate("Fecha Fin","fecha_fin");
-		$this->addEmail("Correo","correo");
-		$this->addText("Nombre","nombre")->strLimit(150)->maxLength(255);
+        $this->addText("Nombre","nombre")->strLimit(150)->maxLength(255);
+		$this->addText("Name","nombre_in")->strLimit(150)->maxLength(255);
 		
 
     }
