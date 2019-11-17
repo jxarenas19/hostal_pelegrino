@@ -9,7 +9,7 @@ class AdminHostalesController extends CBController {
     {
         $this->setTable("hp_hostales");
         $this->setPermalink("hostales");
-        $this->setPageTitle("Hostales");
+        $this->setPageTitle("Hostal");
 
         $this->addText("Nombre","nombre")->strLimit(150)->maxLength(255);
 		$this->addText("Pequeña Descripción","mini_descripcion")->strLimit(150)->maxLength(255);
