@@ -13,11 +13,11 @@
 
 use Illuminate\Support\Facades\Route;
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', 'Site\HomeController@index');
 //Se debe agregar un route para cada modulo especifico
 cb()->routeGroupBackend(function () {
     cb()->routeController('custom', 'AdminCustomController');
 });
 //Route::get('/'.config('crudbooster.ADMIN_PATH'),'AdminCustomController@getIndex')->name('custom');
+
+Route::get('lang/{locale}', 'Site\HomeController@lang');

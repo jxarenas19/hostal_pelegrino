@@ -1,0 +1,2 @@
+1- Falta el fichero CRUDBooster.php dentro de vendor\crocodicstudio\crudbooster\src\helpers
+2- El formato de la fecha tiene problemas con la logica original
